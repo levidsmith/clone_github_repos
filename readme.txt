@@ -4,7 +4,7 @@ clone_git_repos.rb
 Loops through all of the public and private repositories for a user, and clones them to the local system
 
 Requirements
-- Ruby installed - https://github.com/gatechgrad/clone_github_repos
+- Ruby installed - https://www.ruby-lang.org/en/downloads/
 - json gem installed - gem install json
 - git installed - https://git-scm.com/
 - GitHub Personal Access token
