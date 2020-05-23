@@ -1,5 +1,5 @@
 clone_git_repos.rb
-2020 Levi D. Smith - Levi D. Smith
+2020 Levi D. Smith - levidsmith.com
 
 Loops through all of the public and private repositories for a user, and clones them to the local system
 
