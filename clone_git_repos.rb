@@ -85,5 +85,4 @@ if (File.exist?(REPO_LIST_TXT))
 end
 iterate_repo_pages('https://api.github.com/user/repos')
 
-exit()
 check_out_repos()
