@@ -4,9 +4,9 @@ require 'json'
 
 USER='**********'
 #Generate a token from https://github.com/settings/tokens with repo read access
-API_TOKEN='****************************************' 
+API_TOKEN='github_pat_**********************************************************************************' 
 GIT_API_URL='https://api.github.com'
-CLONE_DIR='D:\\*******\\********\\'
+CLONE_DIR='/*/*******/***************/' #Use drive letter and double backslashes if Windows.  Use forward slash if Linux or similar.
 REPO_LIST_JSON='repos.json'
 REPO_LIST_TXT='repos.txt'
 
@@ -20,7 +20,7 @@ def iterate_repo_pages(strURL)
 
 
   for strLine in strHeader.split("\n")
-    matchdata = strLine.match(/Link: .*<(.+)>; rel=\"next\".*<(.+)>; rel=\"last\".*/)
+    matchdata = strLine.match(/Link: .*<(.+)>; rel=\"next\".*<(.+)>; rel=\"last\".*/i)
     if (matchdata)
       puts "matchdata next: #{matchdata[1]} last: #{matchdata[2]}"
       strNextLink = matchdata[1]
@@ -85,4 +85,5 @@ if (File.exist?(REPO_LIST_TXT))
 end
 iterate_repo_pages('https://api.github.com/user/repos')
 
+exit()
 check_out_repos()
